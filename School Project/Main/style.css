@@ -1,0 +1,967 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(128, 128, 128, 0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 20px;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    /*background-color: black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#preview>h2{
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    word-spacing: 0;
+    position: absolute;
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: rgba(255, 255, 255, 1);
+
+
+}
+#preview{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 300px;
+
+    /*filter: blur(10px);*/
+}
+.blur{
+    width: 110vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.76);
+    position: absolute;
+    filter: blur(39px);
+    margin-top: 400px;
+    border-radius: 30px;
+
+}
+
+#preview>button{
+    font-size: 23px;
+    width: 210px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 20px;
+    transition: 400ms;
+    border: 2px solid #000000;
+    position: absolute;
+    margin-top: 100px;
+    
+}
+#preview>button:hover {
+    font-size: 23px;
+    width: 210px;
+    height: 50px;
+    transition: 400ms;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+}
+#preview>button>a{
+    text-decoration: none;
+    color: darksalmon;
+}
+.video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+}
+.headerdiv{
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    transition: 400ms;
+    filter: blur(0.3px);
+    z-index: 4;}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.headerdiv>div>img{
+    width: 40px;
+    margin-left: 30px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+
+}
+#cat{
+    width: 60px;
+    margin-left: 30px;
+    border-radius: 50%;
+    border: none;
+}
+.headerdiv>div>a{
+    text-decoration: none;
+}
+.login{
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    border-radius: 20px;
+    transition: 400ms;
+    border: 2px solid #ffffff;
+    margin-right: 0;
+}
+.login:hover{
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+}
+.signup{
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    border-radius: 20px;
+    transition: 400ms;
+    border: 2px solid #ffffff;
+    margin-right: 30px;
+    margin-left: 0;
+}
+.signup:hover{
+    border: 2px solid #ffffff;
+    background-color: rgba(128, 128, 128, 0.61);
+    color: #ffffff;
+}
+main {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    /*grid-template-areas:*/
+    /*   "a1 a2 a3 a4 a5"*/
+    /*    "b1 b2 b3 b4 b5";*/
+    justify-content: space-evenly;
+    /*align-items: center;*/
+    flex-direction: column;
+    background-color: black;
+
+}
+#background{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+}
+.anime {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.abg{
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 350px;
+    display: unset;
+    position: absolute;
+    margin-top: 50px;
+    filter: blur(30px);
+    z-index: -1;
+
+
+}
+.serials{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.movie{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.Naruto {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #narutoimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #narutobutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.Naruto:hover #narutoimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.Naruto:hover #narutobutton{
+    transition: 450ms;
+    display: block;
+}
+#narutobutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.DeathNote {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #dnimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #dnbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.DeathNote:hover #dnimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.DeathNote:hover #dnbutton{
+    transition: 450ms;
+    display: block;
+}
+#dnbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.AttackOnTitan {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #attackontitanimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #attackontitanbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.AttackOnTitan:hover #attackontitanimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.AttackOnTitan:hover #attackontitanbutton{
+    transition: 450ms;
+    display: block;
+}
+#attackontitanbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.DragonBall {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #dragonballimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #dragonballbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.DragonBall:hover #dragonballimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.DragonBall:hover #dragonballbutton{
+    transition: 450ms;
+    display: block;
+}
+#dragonballbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.MyHeroAcademia {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #myheroacademiaimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #myheroacademiabutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.MyHeroAcademia:hover #myheroacademiaimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.MyHeroAcademia:hover #myheroacademiabutton{
+    transition: 450ms;
+    display: block;
+}
+#myheroacademiabutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}
+/*.d122{*/
+/*    width: 200px;*/
+/*    height: 1px;*/
+/*    background-color: #fff;*/
+/*    display: none;*/
+/*}*/
+/*.MyHeroAcademia:hover .d122{*/
+/*    height: 20px;*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    bottom: 40px;*/
+/*    color: black;*/
+/*    transition: 700ms;*/
+/*}*//*----------------------------------------------------------------------------------------------------------------*/
+.GameOfThrones {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #gameofthronesimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #gameofthronesbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.GameOfThrones:hover #gameofthronesimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.GameOfThrones:hover #gameofthronesbutton{
+    transition: 450ms;
+    display: block;
+}
+#gameofthronesbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.Sherlock {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #sherlockimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #sherlockbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.Sherlock:hover #sherlockimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.Sherlock:hover #sherlockbutton{
+    transition: 450ms;
+    display: block;
+}
+#sherlockbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.TheWalkingDead {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #thewalkingdeadimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #thewalkingdeadbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.TheWalkingDead:hover #thewalkingdeadimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.TheWalkingDead:hover #thewalkingdeadbutton{
+    transition: 450ms;
+    display: block;
+}
+#thewalkingdeadbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.TheWitcher {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #thewitcherimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #thewitcherbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.TheWitcher:hover #thewitcherimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.TheWitcher:hover #thewitcherbutton{
+    transition: 450ms;
+    display: block;
+}
+#thewitcherbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.PeakyBlinders {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #peakyblindersimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #peakyblindersbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.PeakyBlinders:hover #peakyblindersimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.PeakyBlinders:hover #peakyblindersbutton{
+    transition: 450ms;
+    display: block;
+}
+#peakyblindersbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.Avatar {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #avatarimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #avatarbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.Avatar:hover #avatarimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.Avatar:hover #avatarbutton{
+    transition: 450ms;
+    display: block;
+}
+#avatarbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.Avengers {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #avengersimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #avengersbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.Avengers:hover #avengersimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.Avengers:hover #avengersbutton{
+    transition: 450ms;
+    display: block;
+}
+#avengersbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.Interstellar {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #interstellarimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #interstellarbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.Interstellar:hover #interstellarimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.Interstellar:hover #interstellarbutton{
+    transition: 450ms;
+    display: block;
+}
+#interstellarbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.FightClub {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #fightclubimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #fightclubbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.FightClub:hover #fightclubimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.FightClub:hover #fightclubbutton{
+    transition: 450ms;
+    display: block;
+}
+#fightclubbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}/*----------------------------------------------------------------------------------------------------------------*/
+.ShutterIsland {
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 450ms;
+}
+    #shutterislandimg{
+        width: 200px;
+        height: 260px;
+        transition: 450ms;
+        border-radius: 20px;
+    }
+    #shutterislandbutton{
+    display: none;
+        position: relative;
+        bottom: 150px;
+        left: 50px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        border-radius: 20px;
+        transition: 400ms;
+        border: 2px solid #000000;
+        margin-right: 30px;
+    }
+
+.ShutterIsland:hover #shutterislandimg{
+    filter: blur(5px);
+    transition: 450ms;
+}
+.ShutterIsland:hover #shutterislandbutton{
+    transition: 450ms;
+    display: block;
+}
+#shutterislandbutton:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+}
+/*----------------------------------------------------------------------------------------*/
+main>h2{
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    word-spacing: 0;
+    z-index: 1;
+    margin-left: 50px;
+    font-size: 30px;
+}
+/*-----------------------------------------------------------------------------------------*/
+footer {
+    width: 100vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.63);
+    display: flex;
+}
+footer>video{
+    height: 50vh;
+}
+footer>div>h2{
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    word-spacing: 0;
+    margin-left: 50px;
+    font-size: 30px;
+}
+footer>div>p{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    word-spacing: 0;
+    margin-left: 50px;
+    font-size: 15px;
+}
+footer>div>p>span{
+    color: seagreen;
+    font-size: 14px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+
